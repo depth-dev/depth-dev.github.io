@@ -1,0 +1,182 @@
+<html>
+    <style>
+        h1 { color: white; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:50px}
+        h3 { color: rgb(255, 118, 118); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:30px}
+        h5 { color:rgb(55, 201, 238); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:22px}
+        body {
+            background-color:rgb(56, 56, 56);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        p {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size:20px; 
+            color:white;
+            text-align:center;}
+        a {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size:20px; 
+            color:lime;
+            text-align:center;
+        }
+        button {
+            border:none;
+            background-color: gray;
+            color:lime;
+            padding: 10px 10px;
+            text-align: center;
+            font-size:16px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        figcaption {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size:12px; 
+            color:rgb(156, 156, 156);
+            text-align:center;
+            font-style:italic;
+        }
+        .tab {
+            overflow: hidden;
+            text-align:center;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 10px;
+            transition: 0.3s;
+            font-size: 17px;
+            color:rgb(0, 140, 255);
+        }
+        .tab button:hover {
+            background-color:rgb(139,   139, 139);
+        }
+        .tab button.active {
+            background-color: rgb(206, 206, 206);
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+        }
+        .centered {
+            text-align: center;
+            width: 100%;
+        }
+
+        .centered_tab {
+            float:none; /*to make sure there is no active float*/
+            display: inline-block;
+        }
+    </style>
+    <script>
+        function openTab(evt, tab) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none"
+            }
+            tablinks = document.getElementsByClassName("tablinks")
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "")
+            }
+            document.getElementById(tab).style.display = "block"
+            evt.currentTarget.className += " active"
+        }
+        
+        window.onload = function() {
+            document.getElementById("default").click()
+        }
+    </script>
+    <head>
+        <title>News</title>
+        <meta property="og:title" content="News - misterdepth">
+        <meta property="og:type" content="website">
+        <meta property="og:description" content="New Streaming Schedule for misterdepth's twitch.">
+        <meta property="twitter:image:src" content="../files/logo.png">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type = "image/link" href="../files/logo.png">
+    </head>
+    <body>
+        <center>
+            <h1>New Streaming Schedule</h1>
+            <hr>
+            <h3>Check out the latest news below!</h3>
+            <br>
+            <br>
+            <h5>What was my previous streaming schedule?</h5>
+            <p>To say the least, it wasn't much of a streaming schedule, and more just a "I do what I want, when I want" type of thing.</p>
+            <p>Anyways, I've been working on my new streaming schedule, and I'm very excited to announce it.</p>
+            <br>
+            <h5>My New Schedule</h5>
+            <p><u>Here is my new schedule, though it will probably vary. Click on the various timezones presented to your preferrence.</u></p>
+            <div class="tab">
+                <div class="centered">
+                    <ul>
+                        <li class="centered_tab" ...>
+                            <button class="tablinks" onclick="openTab(event, 'pdt')" id="default">PDT</button>
+                        </li>
+                        <li class="centered_tab" ...>
+                            <button class="tablinks" onclick="openTab(event, 'est')">EST</button>
+                        </li>
+                        <li class="centered_tab">
+                            <button class="tablinks" onclick="openTab(event, 'gmt')">GMT</button>
+                        </li>
+                        <li class="centered_tab" ...>
+                            <button class="tablinks" onclick="openTab(event, 'cest')">CEST</button>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            <div class="tabcontent" id="pdt">
+                <p>Monday - 4PM</p>
+                <p>Wednesday - 4PM</p>
+                <p>Friday - 4PM</p>
+                <p>Saturday - 11:30AM</p>
+                <p>Sunday - 1PM</p>
+            </div>
+            <div class="tabcontent" id="est">
+                <p>Monday - 7PM</p>
+                <p>Wednesday - 7PM</p>
+                <p>Friday - 7PM</p>
+                <p>Saturday - 2:30PM</p>
+                <p>Sunday - 4PM</p>
+            </div>
+            <div class="tabcontent" id="gmt">
+                <p>Monday - 11PM</p>
+                <p>Wednesday - 11PM</p>
+                <p>Friday - 11PM</p>
+                <p>Saturday - 6:30PM</p>
+                <p>Sunday - 8PM</p>
+            </div>
+            <div class="tabcontent" id="cest">
+                <p>Monday - 12AM</p>
+                <p>Wednesday - 12AM</p>
+                <p>Friday - 12AM</p>
+                <p>Saturday - 7:30PM</p>
+                <p>Sunday - 9PM</p>
+            </div>
+            <br>
+            <br>
+            <h5>Variations</h5>
+            <p>Sometimes if I'm feeling <strong>spicy</strong>, I might mix up my schedule.</p>
+            <p>You can always find out whenever my streams are </p>
+            <a href="https://discord.gg/bHqwhVm">in my discord.</a>
+            <br>
+            <p>Still confused? Here is an image below of how to find my next stream time!</p>
+            <figure>
+                <img src="../files/stream-example.png" width="222" height="39">
+                <br>
+                <figcaption>The "Next Stream" area in my discord.</figcaption>
+            </figure>
+            <br>
+            <br>
+            <h5>How Long do I Stream For?</h5>
+            <p>On most occasions, my streams are around 1 hour long.</p>
+            <p>If I'm having a blast, the stream could be much longer than that, and vice versa.</p>
+        </center>
+    </body>
+</html>

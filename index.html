@@ -114,6 +114,12 @@
                             <button class="tablinks" onclick="openTab(event, 'twitch')">Twitch</button>
                         </li>
                         <li class="centered_tab" ...>
+                            <button class="tablinks" onclick="openTab(event, 'news')">News</button>
+                        </li>
+                        <li class="centered_tab" ...>
+                            <button class="tablinks" onclick="openTab(event, 'sbn')">SBN</button>
+                        </li>
+                        <li class="centered_tab" ...>
                             <button class="tablinks" onclick="openTab(event, 'buttons')">Other Tabs</button>
                         </li>
                     </ul>
@@ -177,7 +183,7 @@
             </div>
 
 
-             <div class="tabcontent" id="twitch">
+            <div class="tabcontent" id="twitch">
                 <h3>Watch My Twitch from This Website!</h3>
                 <br>
                 <br>
@@ -185,8 +191,15 @@
                 <br>
                 <br>
                 <p>If you like my content and enjoy what I do, please consider following. I appreciate it a lot!</p>
-             </div>
+            </div>
 
+            <div class="tabcontent" id="news">
+                <iframe src="./news" width="600" height="500" frameborder=0>Loading...</iframe>
+            </div>
+
+            <div class="tabcontent" id="sbn">
+                <iframe src="./files/sbn" width="500" height="500" frameborder=0>Loading...</iframe>
+            </div>
             <script src="https://embed.twitch.tv/embed/v1.js"></script>
             <script type="text/javascript">
                 new Twitch.Embed("twitch-embed", {
