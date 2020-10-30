@@ -42,6 +42,12 @@
             font-size:16px;
             font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
         }
+        #notworking {
+            background-color:rgb(1, 0, 41);
+            font-size:8px;
+            width:500px;
+            height:230px;
+        }
     </style>
     <head>
         <meta property="og:title" content="misterwebsite - The Wheel">
@@ -76,7 +82,14 @@
             <h3>Test your luck and Spin the Wheel!</h3>
             <br>
             <br>
-            <br>
+            <div id="notworking">
+                <br>
+                <p>Note: The wheel may sometimes return</p>
+                <p><strong>0</strong> despite any previous input.</p>
+                <p>A fix is being worked on.</p>
+                <br>
+                <button onclick="document.getElementById('notworking').style.display = 'none'">Close Me</button>
+            </div>
             <h5>Minimum</h5>
             <input type="text" id="low">
             <h5>Maximum</h5>
