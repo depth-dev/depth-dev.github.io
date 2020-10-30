@@ -4,6 +4,6 @@
         "c51bb9aa203740f7b1b6979499cdbd7e",
         "6989f14a162c4466b6adee3d2b786e60"
     ],
-    "alert":true,
+    "alert":false,
     "latestAlert":"This is a test alert! You can ignore this."
 }
