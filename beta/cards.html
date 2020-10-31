@@ -1,0 +1,91 @@
+<html>
+    <style>
+        h1 { color: white; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:50px}
+        h3 { color: rgb(255, 118, 118); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:30px}
+        h4 { color: rgb(0, 0, 0); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:25px}
+        h5 { color:rgb(55, 201, 238); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:22px}
+        body {
+            background-color:rgb(56, 56, 56);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        p {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size:20px; 
+            color:white;
+            text-align:center;}
+        a {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size:20px; 
+            color:lime;
+            text-align:center;
+        }
+        button {
+            border:none;
+            background-color: gray;
+            color:lime;
+            padding: 10px 10px;
+            text-align: center;
+            font-size:16px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        figcaption {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size:12px; 
+            color:rgb(156, 156, 156);
+            text-align:center;
+            font-style:italic;
+        }
+        .card {
+             /* Add shadows to create the "card" effect */
+            box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+            background-color:gray;
+            transition: 0.3s;
+            width:35%;
+            height:75%;
+            border-radius: 5px; /* 5px rounded corners */
+        }
+
+        /* On mouse-over, add a deeper shadow */
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        }  
+
+        /* Add some padding inside the card container */
+        .container {
+            padding: 2px 16px;
+        }
+        img {
+            border-radius: 5px 5px 0 0;
+        }
+    </style>
+    <body>
+        <center>
+            <h1>Beta - Cards</h1>
+            <hr>
+            <br>
+            <h5>These are cards, very experimental but they have a lot of potential!</h5>
+            <div class="card">
+                <img src="../files/logo.png" alt="Logo" style="width:70%">
+                <div class="container">
+                  <h4><b>Logo of The Website</b></h4>
+                  <p>Welcome to misterwebsite!</p>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class="card">
+                <br>
+                <br>
+                <img src="../files/smp-1.png" alt="SMP" style="width:90%">
+                <div class="container">
+                  <h4><b>SleepyTown</b></h4>
+                  <p>Beautiful town in SMPNotGood.</p>
+                  <a href="../smp/">Read more about SMPNotGood!</a>
+                </div>
+            </div>  
+        </center>
+    </body>
+</html>
