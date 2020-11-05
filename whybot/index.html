@@ -1,0 +1,180 @@
+<html>
+    <style>
+        h1 { color: white; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:50px}
+        h3 { color: rgb(255, 118, 118); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:30px}
+        h5 { color:rgb(55, 201, 238); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:22px}
+        body {
+            background-color:rgb(56, 56, 56);
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+        p {
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size:20px; 
+            color:white;
+            text-align:center;}
+        a {
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+            font-size:20px; 
+            color:lime;
+            text-align:center;
+        }
+        button {
+            border:none;
+            background-color: gray;
+            color:lime;
+            padding: 10px 10px;
+            text-align: center;
+            font-size:16px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+        
+        .tab {
+            overflow: hidden;
+            text-align:center;
+        }
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 10px;
+            transition: 0.3s;
+            font-size: 17px;
+            color:rgb(0, 140, 255);
+        }
+        .tab button:hover {
+            background-color:rgb(139,   139, 139);
+        }
+        .tab button.active {
+            background-color: rgb(206, 206, 206);
+        }
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+        }
+        .centered {
+            text-align: center;
+            width: 100%;
+        }
+
+        .centered_tab {
+            float:none; /*to make sure there is no active float*/
+            display: inline-block;
+        }
+        .list {
+            font-size:14px;
+            color:gray;
+        }
+        #yes {
+            font-size:30px;
+            color:rgb(0, 228, 0);
+        }
+        #no {
+            font-size:30px;
+            color:rgb(255, 0, 0);
+        }
+        #restarting {
+            font-size:30px;
+            color:rgb(255, 173, 22);
+        }
+    </style>
+    <script>
+        function openTab(evt, tab) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none"
+            }
+            tablinks = document.getElementsByClassName("tablinks")
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "")
+            }
+            document.getElementById(tab).style.display = "block"
+            evt.currentTarget.className += " active"
+        }
+        let yes = "WhyBot is up and running."
+        let no = ""
+        let restarting = ""
+        window.onload = function() {
+            document.getElementById("default").click()
+            document.getElementById("yes").innerHTML = yes
+            document.getElementById("no").innerHTML = no
+            document.getElementById("restarting").innerHTML = restarting
+        }
+    </script>
+    <body>
+        <center>
+            <h1>WhyBot</h1>
+            <div class="tab">
+                <div class="centered">
+                    <ul>
+                        <li class="centered_tab" ...>
+                            <button onclick="openTab(event, 'about')" id="default">About WhyBot</button>
+                        </li>
+                        <li class="centered_tab" ...>
+                            <button onclick="openTab(event, 'commands')">Commands</button>
+                        </li>
+                        <li class="centered_tab" ...>
+                            <button onclick="openTab(event, 'status')">Status</button>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+              <hr>
+
+              <div class="tabcontent" id="about">
+                  <h3>What Is WhyBot?</h3>
+                  <p>WhyBot is a general purpose discord bot made for message logging, moderation, and more!</p>
+                  <h5>Message Logging</h5>
+                  <p>Ghost pinger on the loose? Use BBL!</p>
+                  <p>BetterBotLogs, or BBL, logs deleted or edited messages in a specific channel.</p>
+                  <p><strong>How to Set Up:</strong></p>
+                  <p>1. Create a new channel called <i>message-logs</i>. Make sure WhyBot has permission to see it and send messages.</p>
+                  <p>2. You're done! It's that easy.</p>
+                  <h5>What are the commands?</h5>
+                  <p>To see all of the commands, click on the commands tab!</p>
+                  <h5>Is WhyBot online?</h5>
+                  <p>To see if WhyBot is online, click on the status tab.</p>
+              </div>
+
+              <div class="tabcontent" id="commands">
+                  <h5>Bot Commands and Usage:</h5>
+                  <p>- y!help: Help Menu</p>
+                  <p>- y!meme: Get a meme! <i>(Currently being remodeled.)</i></p>
+                  <p>- y!feedback (feedback): Get some feedback!</p>
+                  <p>- y!modhelp: Moderation Help</p>
+                  <p class="list">    - y!purge (nmber): Purges a number of messages!</p>
+                  <p class="list">    - y!poll (question/answer1/answer2): Poll!</p>
+                  <p class="list">    - y!channel (edit): Edit a channel's permissions! <i>(for everyone)</i></p>
+                  <p class="list">    - y!mail (user) (mail): Mail a user some information!</p>
+                  <p>- y!info: Grab information of the bot!</p>
+                  <p>- y!question: Get asked a random question by the bot.</p>
+                  <p>- y!invite: Get the bot invite.</p>
+                  <p>- y!roses: Roses are red... This is a command...</p>
+                  <p>- y!userinfo: Gain a guild member's information!</p>
+                  <p>- y!betterbotlogs (optional "check"): Information for betterbotlogs</p>
+                  <p>- y!guess (number): Guess a number!</p>
+                  <p>- y!fight (user): Fight another user!</p>
+                  <p>- y!content: Help menu for content!</p>
+                  <p class="list">    - y!twitch (IGN) (channel) (role): Twitch notification</p>
+                  <p class="list">    - y!twitch (IGN) (channel) (video link) (role): Youtube Notification</p>
+                  <p>- y!animals: Help menu for animals!</p>
+                  <p class="list">    - y!cat: Cats!</p>
+                  <p class="list">    - y!dog: Dogs!</p>
+                  <p class="list">    - y!fox: Foxes!</p>
+                  <p>- y!mcinfo (username): Get minecraft information of a user!</p>
+              </div>
+
+              <div class="tabcontent" id="status">
+                  <h3>Is WhyBot Up and Running?</h3>
+                  <p id="yes"></p>
+                  <p id="no"></p>
+                  <p id="restarting"></p>
+              </div>
+        </center>
+    </body>
+</html>
