@@ -1,168 +1,56 @@
 <html>
+    <head>
+        <title>Please wait.</title>
+        <link rel="icon" href="./question.png">
+    </head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Asap:wght@700&display=swap" rel="stylesheet">
     <style type="text/css">
-        h1 { color: white; text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:50px}
-        h3 { color: rgb(255, 118, 118); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:30px}
-        h5 { color:rgb(55, 201, 238); text-align: center; font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; font-size:22px}
+        h1 { color: rgb(0, 0, 0); text-align: center; font-family:"Asap", sans-serif; font-size:50px}
+        h3 { color: rgb(0, 0, 0); text-align: center; font-family: 'Courier New', Courier, monospace; font-size:30px}
         body {
-            background-color:rgb(56, 56, 56);
+            background-color:rgb(255, 255, 255);
             -webkit-background-size: cover;
             -moz-background-size: cover;
             -o-background-size: cover;
             background-size: cover;
         }
-        p {
-            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-            font-size:20px; 
-            color:white;
-            text-align:center;}
-        a {
-            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
-            font-size:20px; 
-            color:lime;
-            text-align:center;
-        }
-        button {
-            border:none;
-            background-color: gray;
-            color:lime;
-            padding: 10px 10px;
-            text-align: center;
-            font-size:16px;
-            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
-        }
-        
-        .tab {
-            overflow: hidden;
-            text-align:center;
-        }
-        .tab button {
-            background-color: inherit;
-            float: left;
-            border: none;
-            outline: none;
-            cursor: pointer;
-            padding: 14px 10px;
-            transition: 0.3s;
-            font-size: 17px;
-            color:rgb(0, 140, 255);
-        }
-        .tab button:hover {
-            background-color:rgb(139,   139, 139);
-        }
-        .tab button.active {
-            background-color: rgb(206, 206, 206);
-        }
-        .tabcontent {
-            display: none;
-            padding: 6px 12px;
-        }
-        .centered {
-            text-align: center;
-            width: 100%;
-        }
-
-        .centered_tab {
-            float:none; /*to make sure there is no active float*/
-            display: inline-block;
-        }
     </style>
-    <script>
-        function openTab(evt, tab) {
-            var i, tabcontent, tablinks;
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none"
-            }
-            tablinks = document.getElementsByClassName("tablinks")
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "")
-            }
-            document.getElementById(tab).style.display = "block"
-            evt.currentTarget.className += " active"
-        }
-        
-        window.onload = function() {
-            document.getElementById("default").click()
-        }
-    </script>
-    <head>
-        <meta property="og:title" content="misterdepth">
-        <meta property="og:type" content="website">
-        <meta property="og:description" content="Welcome to the most professional website out there!">
-        <meta property="twitter:image:src" content="./files/logo.png">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>misterwebsite</title>
-        <link rel="shortcut icon" type = "image/link" href="./files/logo.png">
-    </head>
     <body>
-        <center>
-            <img src="./files/logo.png" width="100" height="100">
-            <h1>misterwebsite</h1>
-            <div class="tab">
-                <div class="centered">
-                    <ul>
-                        <li class="centered_tab" ...>
-                            <button class="tablinks" onclick="openTab(event, 'about')" id="default">About Me</button>
-                        </li>
-                        <li class="centered_tab" ...>
-                            <button class="tablinks" onclick="openTab(event, 'media')">Social Media</button>
-                        </li>
-                        <li class="centered_tab" ...>
-                            <button class="tablinks" onclick="openTab(event, 'twitch')">Twitch</button>
-                        </li>
-                    </ul>
-                </div>
-              </div>
-            <hr>
-
-
-            <div class="tabcontent" id="about">
-                <h3>Who Am I?</h3>
-                <p>I'm a Youtuber AND Streamer. I know, pretty pog right</p>
-                <br>
-                <br>
-                <h5>You can find me at: </h5>
-                <a href="https://www.youtube.com/channel/UCY3uJvG0zTYLw8JErrtJDhA">YouTube - misterdepth</a>
-                <p></p>
-                <a href="https://twitch.tv/misterdepth">Twitch - misterdepth</a>
-                <p></p>
-                <a href="https://discord.gg/bHqwhVm">My Discord</a>
-            </div>
-            
-            <div class="tabcontent" id="media">
-                <h3>My Social Media</h3>
-                <br>
-                <p>Social Media Platforms</p>
-                <button onclick="window.location.href='https://discord.gg/bHqwhVm'">Discord</button>
-                <p></p>
-                <button onclick="window.location.href='https://www.youtube.com/channel/UCY3uJvG0zTYLw8JErrtJDhA'">YouTube</button>
-                <p></p>
-                <button onclick="window.location.href='https://twitch.tv/misterdepth'">Twitch</button>
-                <br>
-                <p>Other Websites</p>
-                <button onclick="window.location.href='https://github.com/misterdepth'">GitHub</button>
-                <p></p>
-            </div>
-
-
-            <div class="tabcontent" id="twitch">
-                <h3>Watch My Twitch from This Website!</h3>
-                <br>
-                <br>
-                <div id="twitch-embed"></div>
-                <br>
-                <br>
-                <p>If you like my content and enjoy what I do, please consider following. I appreciate it a lot!</p>
-            </div>
-
-            <script src="https://embed.twitch.tv/embed/v1.js"></script>
-            <script type="text/javascript">
-                new Twitch.Embed("twitch-embed", {
-                  width: 854,
-                  height: 480,
-                  channel: "misterdepth",
-                });
-              </script>
-        </center>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h1>Welcome.</h1>
+        <br>
+        <br>
+        <br>
+        <br>
+        <h3 id="days"></h3>
+        <h3 id="hours"></h3>
+        <h3 id="minutes"></h3>
+        <h3 id="seconds"></h3>
     </body>
+    <script>
+        var countDownDate = new Date("May 18, 2021 13:00:00").getTime();
+        var x = setInterval(function() {
+          var now = new Date().getTime();
+          var distance = countDownDate - now;
+            
+          var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+          var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+          var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+          document.getElementById("days").innerHTML = days + " days";
+          document.getElementById("hours").innerHTML = hours + " hours";
+          document.getElementById("minutes").innerHTML = minutes + " min";
+          document.getElementById("seconds").innerHTML = seconds + " sec";
+            
+          if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("countdown").innerHTML = "PLEASE WAIT.";
+          }
+        }, 1000);
+        </script>
 </html>
