@@ -17,6 +17,31 @@
   display: flex;
   justify-content: space-between;
 }
+/* The alert message box */
+.alert {
+  padding: 20px;
+  background-color: #009ca1; /* Red */
+  color: rgb(0, 0, 0);
+  margin-bottom: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* The close button */
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+  color: black;
+}
         h1 { color: rgb(255, 255, 255); text-align: center; font-family: Arial, Helvetica, sans-serif; font-size:45px}
         h3 { color: rgb(255, 255, 255); text-align: center; font-family: Arial, Helvetica, sans-serif; font-size:30px}
         h4 { color: rgb(255, 255, 255); text-align: center; font-family: Arial, Helvetica, sans-serif; font-size:25px}
@@ -33,6 +58,10 @@
     <body>
         <a style="color:rgb(61, 61, 61); position:absolute; right:10;" href="./special-resources/" target="_blank">special resources</a>
         <br>
+        <div class="alert">
+            <span  class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+            <strong>Check out some of my recent work on <a href="./runeslime/">RUNESLIME</a>!</strong>
+          </div>
         <h1>welcome</h1>
         <h3>here you can find all of my things</h3>
         <div class="info">
